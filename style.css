@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'display';
+    src: url(./fonts/MagicalnightRegular-6RpA6.otf);
+}
+@font-face {
+    font-family: 'regular';
+    src: url(./fonts/OrbitGateRegular-jEOl9.ttf);
+}
+.hidden{
+    display: none;
+}
+.mobile{
+    display: none;
+}
+.desktop{
+    display: block;
+}
+@media screen and (max-width: 480px) {
+  .mobile{
+    display: block;
+  }
+  .desktop{
+    display: none;
+  }
+}
+body{
+    margin: 0px;
+    position: relative;
+}
+header{
+    background: #181828;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 15px 10px 20px 10px;
+    position: sticky;
+    top: 0;
+}
+header a{
+    margin: 30px;
+}
+body{
+    font-family: qiblat, sans-serif;
+    font-size: 18px;
+}
+h1{
+    font-family: display, serif;
+    font-size: 50px;
+    margin-top: 0px;
+    padding-top: 40px;
+}
+h2{
+    font-family: display, serif;
+    font-size: 40px;
+}
+.turquoise-section{
+    background: #04c4c6;
+}
+.purple-section{
+    background: #ba55c8;
+}
