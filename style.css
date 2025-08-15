@@ -34,6 +34,7 @@ body{
     font-family: regular, sans-serif;
     font-size: 16px;
     font-weight: 100;
+    max-width: 100vw;
 }
 header{
     background: #181828;
@@ -78,6 +79,7 @@ h2{
     margin: 0px auto;
     padding-top: 20px;
     width: 750px;
+    font-weight: 500;
 }
 p{
     margin: 0px auto;
@@ -153,6 +155,49 @@ p{
     background-image: linear-gradient(#04c4c6 50%, #ababbc 50%);
     height: 100px;
     margin: -1px 0px;
+}
+.box-container{
+    width: 900px;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0px auto;
+    padding: 20px 0px;
+}
+.box{
+    max-width: 45%;
+    margin: 10px auto 20px auto;
+    padding: 10px;
+}
+.box p, .box h2{
+    width: 95%;
+}
+@media screen and (max-width: 1000px) {
+    .box-container{
+        width: 95vw;
+    }
+}
+@media screen and (max-width: 700px) {
+    .box-container{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .box{
+        max-width: 280px;
+    }
+}
+.blue-box{
+    background: #bbb1df;
+    border: solid #392584 10px;
+    border-radius: 20px 100px 20px 0px;
+}
+.blue-box li{
+    margin-bottom: 10px;
+    list-style-image: url(./img/yellow_triangle.png);
+}
+.yellow-box{
+    background: #fcf9d1;
+    border: solid #fef698 10px;
+    border-radius: 20px 0px 0px 50px;
 }
 footer{
     background: #ababbc;
