@@ -162,6 +162,7 @@ p{
     flex-wrap: nowrap;
     margin: 0px auto;
     padding: 20px 0px;
+    align-items: center;
 }
 .box{
     max-width: 45%;
@@ -170,6 +171,37 @@ p{
 }
 .box p, .box h2{
     width: 95%;
+}
+.blue-box{
+    padding-right: 20px;
+    margin-right: 20px;
+}
+ .blue-box h2{
+    text-align: center;
+    background: #bbb1df;
+    padding: 5px;
+ }
+.blue-box ul{
+    text-indent: 0%;
+    padding-left: 0px;
+}
+.blue-box li{
+    margin-bottom: 10px;
+    list-style-image: url(./img/yellow_triangle.png);
+    list-style-position: inside;
+    background: #bbb1df;
+    padding: 5px;
+}
+.yellow-box h2{
+    text-align: center;
+    background: #fcf9d1;
+    padding: 5px 10px;
+}
+.yellow-box p{
+    background: #fcf9d1;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 @media screen and (max-width: 1000px) {
     .box-container{
@@ -184,20 +216,10 @@ p{
     .box{
         max-width: 280px;
     }
-}
-.blue-box{
-    background: #bbb1df;
-    border: solid #392584 10px;
-    border-radius: 20px 100px 20px 0px;
-}
-.blue-box li{
-    margin-bottom: 10px;
-    list-style-image: url(./img/yellow_triangle.png);
-}
-.yellow-box{
-    background: #fcf9d1;
-    border: solid #fef698 10px;
-    border-radius: 20px 0px 0px 50px;
+    .blue-box{
+        padding-right: 0px;
+        margin-right: 0px;
+    }
 }
 footer{
     background: #ababbc;
