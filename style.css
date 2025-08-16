@@ -18,12 +18,14 @@
 @media screen and (max-width: 500px) {
   .mobile{
     display: block;
-    position: absolute;
-    right: 10px;
   }
   .desktop{
     display: none;
   }
+}
+#mobile-menu-icon{
+    position: absolute;
+    right: 20px;
 }
 .number-text{
     font-family: sans-serif;
@@ -59,11 +61,6 @@ header a{
     }
     header a{
         margin: 0px 20px;
-    }
-}
-@media screen and (max-width: 700px) {
-    #site-logo{
-        margin-right: 20px;
     }
 }
 h1{
@@ -105,6 +102,10 @@ p{
     background: black;
     color: white;
 }
+.review-box{
+    width: 750px;
+    margin: 20px auto 0px auto;
+}
 @media screen and (max-width: 800px) {
     h1{
         width: 90vw;
@@ -116,6 +117,9 @@ p{
         width: 90vw;
     }
     .image-wrap{
+        width: 90vw;
+    }
+    .review-box{
         width: 90vw;
     }
 }
@@ -220,6 +224,15 @@ p{
         padding-right: 0px;
         margin-right: 0px;
     }
+}
+.reviewer{
+    text-align: right;
+}
+.review-divider{
+    height: 0px;
+    width: 300px;
+    border-bottom: dotted #392584 5px;
+    margin: 10px auto 50px auto;
 }
 footer{
     background: #ababbc;
