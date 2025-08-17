@@ -123,13 +123,19 @@ p{
         width: 90vw;
     }
 }
-.marqee{
+.marquee{
     background: #b3dedf;
     color: #392584;
     padding: 10px 0px;
     margin-bottom: 20px;
     font-size: 20px;
     font-weight: 900;
+    overflow: hidden;
+    display: flex;
+}
+.marquee-message{
+    white-space: nowrap;
+    margin-right: 5px;
 }
 .turquoise-section{
     background: #04c4c6;
@@ -238,4 +244,37 @@ footer{
     background: #ababbc;
     text-align: center;
     padding: 20px;
+}
+.pulsing {
+    animation: jump 10s infinite;
+}
+@keyframes jump {
+    0% {
+        background: #fcf9d1;
+        rotate: 0deg;
+    }
+    10% {
+        rotate: 2deg;
+    }
+    20% {
+        text-shadow: 0px 0px 3px #efa7f8;
+    }
+    30% {
+        rotate: -2deg;
+    }
+    40% {
+        background: #efa7f8;
+    }
+    50% {
+        rotate: 2deg;
+    }
+    60% {
+        background: #b1fafb;
+    }
+    70% {
+        rotate: 0deg;
+    }
+    80%, 100% {
+        background: #fcf9d1;
+    }
 }
