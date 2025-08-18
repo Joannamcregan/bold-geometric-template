@@ -30,6 +30,9 @@
 .number-text{
     font-family: sans-serif;
 }
+.centered-text{
+    text-align: center;
+}
 body{
     margin: 0px;
     position: relative;
@@ -196,7 +199,7 @@ p{
     margin: -1px 0px;
 }
 .turquoise-gray-transition{
-    background-image: linear-gradient(#04c4c6 70%, #ababbc 70%);
+    background-image: linear-gradient(#04c4c6 80%, #ababbc 80%);
     height: 200px;
     margin: -1px 0px;
 }
@@ -281,13 +284,6 @@ p{
     border-bottom: dotted #392584 5px;
     margin: 0px auto 50px auto;
 }
-footer{
-    background: #ababbc;
-    text-align: center;
-    padding: 20px;
-    z-index: 500;
-    position: relative;
-}
 .pulsing {
     animation: jump 10s infinite;
 }
@@ -320,4 +316,24 @@ footer{
     80%, 100% {
         background: #fcf9d1;
     }
+}
+footer{
+    background: #ababbc;
+    text-align: center;
+    padding: 20px;
+    z-index: 500;
+    position: relative;
+}
+#privacy-policy-link{
+    margin-bottom: 30px;
+    text-decoration: underline;
+}
+#privacy-policy{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2000;
+    height: 100%;
+    width: 100%;
+    background: #d3d3e6;
 }
