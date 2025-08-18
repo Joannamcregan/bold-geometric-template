@@ -15,7 +15,7 @@
 .desktop{
     display: block;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .mobile{
     display: block;
   }
@@ -47,6 +47,7 @@ header{
     padding: 10px;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 header a{
     margin: 0px 30px;
@@ -106,6 +107,33 @@ p{
     width: 750px;
     margin: 20px auto 0px auto;
 }
+.slid{
+    transform: translateX(50px);
+}
+.sliding{
+    animation: slide 0.5s forwards;
+}
+@keyframes slide {
+    0%{
+        transform: translateX(50px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@media screen and (max-width: 900px) {
+    .slid{
+        transform: translateY(100px);
+    }
+    @keyframes slide {
+        0%{
+            transform: translateY(100px);
+        }
+        100%{
+            transform: translateY(0px);
+        }
+    }
+}
 @media screen and (max-width: 800px) {
     h1{
         width: 90vw;
@@ -162,8 +190,8 @@ p{
     margin: -1px 0px;
 }
 .turquoise-gray-transition{
-    background-image: linear-gradient(#04c4c6 50%, #ababbc 50%);
-    height: 100px;
+    background-image: linear-gradient(#04c4c6 70%, #ababbc 70%);
+    height: 200px;
     margin: -1px 0px;
 }
 .box-container{
@@ -206,6 +234,7 @@ p{
     text-align: center;
     background: #fcf9d1;
     padding: 5px 10px;
+    position: relative;
 }
 .yellow-box p{
     background: #fcf9d1;
@@ -238,12 +267,14 @@ p{
     height: 0px;
     width: 300px;
     border-bottom: dotted #392584 5px;
-    margin: 10px auto 50px auto;
+    margin: 0px auto 50px auto;
 }
 footer{
     background: #ababbc;
     text-align: center;
     padding: 20px;
+    z-index: 500;
+    position: relative;
 }
 .pulsing {
     animation: jump 10s infinite;
