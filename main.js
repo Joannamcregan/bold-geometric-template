@@ -1,8 +1,11 @@
+const links = document.querySelectorAll('.desktop-link');
+const aboutLink = document.getElementById('about-link');
+const aboutSection = document.getElementById('about-section');
 const reviews = document.querySelectorAll('.review-box');
 
-window.onload = scrollMarquee();
+window.onload = addFlourishes();
 window.addEventListener("scroll", () => { 
-    handleScrollAnimation();
+    handleSlideAnimation();
 });
 
 const elementInView = (el, dividend = 1) => {
@@ -20,26 +23,40 @@ const elementOutofView = (el) => {
     );
 };
 
-const displayScrollElement = (element) => {
+const slideIn = (element) => {
     element.classList.add("sliding");
     setTimeout(()=>{
         element.classList.remove("slid");
     }, 500);
 };
 
-const hideScrollElement = (element) => {
+const slideOut = (element) => {
     element.classList.add("slid");
     element.classList.remove("sliding");
 };
 
-const handleScrollAnimation = () => {
+const handleSlideAnimation = () => {
     reviews.forEach((el) => {
         if (elementInView(el, 1.25)) {
-            displayScrollElement(el);
+            slideIn(el);
         } else if (elementOutofView(el)) {
-            hideScrollElement(el)
+            slideOut(el)
         }
     })
+}
+
+const addUnderline = (link) => {
+    links.forEach((el) => {
+        el.classList.remove("yellow-underline");
+    })
+    link.classList.add("yellow-underline");
+}
+
+const handleUnderlines = (sectionRef, linkRef) => {
+    const section = document.querySelector(sectionRef);
+    if (elementInView(section, 2)) {
+        addUnderline(linkRef);
+    }
 }
 
 function scrollMarquee() {
@@ -64,4 +81,13 @@ function scrollMarquee() {
         }
         i = i + 0.2;
     }, 0);
+}
+
+function addFlourishes() {
+    scrollMarquee();
+    links.forEach((el) => {
+        window.addEventListener("scroll", () => {
+            handleUnderlines(el.getAttribute('href'), el);
+        });
+    })
 }

@@ -55,6 +55,9 @@ header a{
     text-decoration: none;
     border-bottom: solid #181828 2px;
 }
+.yellow-underline{
+    border-bottom: solid #fcf9d1 2px;
+}
 #site-logo{
     height: 40px;
     margin-right: 100px;
