@@ -4,11 +4,21 @@ const aboutSection = document.getElementById('about-section');
 const reviews = document.querySelectorAll('.review-box');
 const closePrivacyPolicy = document.getElementById('close-privacy-policy');
 const privacyPolicy = document.getElementById('privacy-policy');
+const privacyPolicyLink = document.getElementById('privacy-policy-link');
 
 window.onload = addBehavior();
 window.addEventListener("scroll", () => { 
     handleSlideAnimation();
 });
+
+privacyPolicyLink.addEventListener("click", () => {
+    privacyPolicy.classList.remove('hidden');
+    privacyPolicy.classList.add('fade-open');
+    privacyPolicy.classList.add('block');
+    setTimeout(()=>{
+        privacyPolicy.classList.remove('fade-open');
+    }, 1000);
+})
 
 closePrivacyPolicy.addEventListener("click", () => {
     privacyPolicy.classList.remove('block');
@@ -23,8 +33,7 @@ const elementInView = (el, dividend = 1) => {
     const elementTop = el.getBoundingClientRect().top;
     return (
         elementTop <=
-        (window.innerHeight || document.documentElement.clientHeight) / dividend
-    );
+        (window.innerHeight || document.documentElement.clientHeight) / dividend);
 };
 
 const elementOutofView = (el) => {
