@@ -51,6 +51,9 @@ header{
 }
 header a{
     margin: 0px 30px;
+    color: white;
+    text-decoration: none;
+    border-bottom: solid #181828 2px;
 }
 #site-logo{
     height: 40px;
@@ -200,12 +203,15 @@ p{
     flex-wrap: nowrap;
     margin: 0px auto;
     padding: 20px 0px;
-    align-items: center;
 }
 .box{
     max-width: 45%;
     margin: 10px auto 20px auto;
     padding: 10px;
+}
+.box-divider{
+    height: 100px;
+    margin-top: 0px;
 }
 .box p, .box h2{
     width: 95%;
@@ -248,6 +254,9 @@ p{
     }
 }
 @media screen and (max-width: 700px) {
+    .box-divider{
+        margin-top: -100px;
+    }
     .box-container{
         flex-wrap: wrap;
         flex-direction: column;

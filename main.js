@@ -27,6 +27,11 @@ const displayScrollElement = (element) => {
     }, 500);
 };
 
+const hideScrollElement = (element) => {
+    element.classList.add("slid");
+    element.classList.remove("sliding");
+};
+
 const handleScrollAnimation = () => {
     reviews.forEach((el) => {
         if (elementInView(el, 1.25)) {
