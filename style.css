@@ -9,6 +9,20 @@
 .hidden{
     display: none;
 }
+.block{
+    display: block;
+}
+.fade-closed{
+    animation: fade-out 1s forwards;
+}
+@keyframes fade-out {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
 .mobile{
     display: none;
 }
@@ -336,4 +350,14 @@ footer{
     height: 100%;
     width: 100%;
     background: #d3d3e6;
+}
+#privacy-policy h1{
+    margin-top: 30px;
+}
+.overlay-close-button{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
 }

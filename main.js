@@ -2,11 +2,22 @@ const links = document.querySelectorAll('.desktop-link');
 const aboutLink = document.getElementById('about-link');
 const aboutSection = document.getElementById('about-section');
 const reviews = document.querySelectorAll('.review-box');
+const closePrivacyPolicy = document.getElementById('close-privacy-policy');
+const privacyPolicy = document.getElementById('privacy-policy');
 
-window.onload = addFlourishes();
+window.onload = addBehavior();
 window.addEventListener("scroll", () => { 
     handleSlideAnimation();
 });
+
+closePrivacyPolicy.addEventListener("click", () => {
+    privacyPolicy.classList.remove('block');
+    privacyPolicy.classList.add('fade-closed');
+    setTimeout(()=>{
+        privacyPolicy.classList.add('hidden');
+        privacyPolicy.classList.remove('fade-closed');
+    }, 1000);
+})
 
 const elementInView = (el, dividend = 1) => {
     const elementTop = el.getBoundingClientRect().top;
@@ -83,11 +94,11 @@ function scrollMarquee() {
     }, 0);
 }
 
-function addFlourishes() {
+function addBehavior() {
     scrollMarquee();
     links.forEach((el) => {
         window.addEventListener("scroll", () => {
             handleUnderlines(el.getAttribute('href'), el);
         });
-    })
+    });
 }
