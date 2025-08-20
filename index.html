@@ -104,7 +104,7 @@
         <div class="turquoise-gray-transition"></div>
     </main>
     <section>
-        <div id="privacy-policy">
+        <div id="privacy-policy" class="hidden">
             <img src="./img/purple_x.png" aria-label="close privacy policy overlay" id="close-privacy-policy" class="overlay-close-button" />
             <h1 class="centered-text">Privacy Policy</h1>
             <p class="centered-text"><strong>Updated <span class="number-text">8/18/2024</span></strong></p>
@@ -121,6 +121,19 @@
             <h2>What happens if you don't want us to collect information from you?</h2>
             <p>Mauris fringilla felis eu mi lacinia, eu auctor risus fermentum. Quisque maximus erat mi, rutrum lobortis ligula elementum et. Nulla ex erat, imperdiet sed dapibus a, suscipit a nunc.</p>
         </div>
+    </section>
+    <section>
+        <div id="cookie-banner">
+            <div class="cookie-text-section">
+                <h3>This site actually doesn't use cookies.</h3>
+                <p>It's only a template meant to serve as a starting point for your own website. If you add a tool to analyze traffic, you will need to set up a cookie policy.</p>
+            </div>
+            <div class="cookie-buttons-section">
+                <button id="allow-cookies">Allow</button>
+                <button id="disallow-cookies">Don't Allow</button>
+            </div>
+        </div>
+        <div id="cookie-overlay"></div>
     </section>
     <script src="main.js" type="module"></script>
 </body>
