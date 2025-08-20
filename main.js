@@ -5,6 +5,9 @@ const reviews = document.querySelectorAll('.review-box');
 const closePrivacyPolicy = document.getElementById('close-privacy-policy');
 const privacyPolicy = document.getElementById('privacy-policy');
 const privacyPolicyLink = document.getElementById('privacy-policy-link');
+const cookieOverlay = document.getElementById('cookie-banner');
+const allowCookies = document.getElementById('allow-cookies');
+const disallowCookies = document.getElementById('disallow-cookies');
 
 window.onload = addBehavior();
 window.addEventListener("scroll", () => { 
@@ -28,6 +31,17 @@ closePrivacyPolicy.addEventListener("click", () => {
         privacyPolicy.classList.remove('fade-closed');
     }, 1000);
 })
+
+const closeCookieOverlay = () => {
+    cookieOverlay.classList.add('fade-closed');
+    setTimeout(()=>{
+        cookieOverlay.classList.add('hidden');
+    }, 1000)
+}
+
+allowCookies.addEventListener("click", closeCookieOverlay);
+
+disallowCookies.addEventListener("click", closeCookieOverlay);
 
 const elementInView = (el, dividend = 1) => {
     const elementTop = el.getBoundingClientRect().top;
