@@ -4,6 +4,9 @@ const aboutSection = document.getElementById('about-section');
 const reviews = document.querySelectorAll('.review-box');
 const closePrivacyPolicy = document.getElementById('close-privacy-policy');
 const privacyPolicy = document.getElementById('privacy-policy');
+const openMobileMenu = document.getElementById('mobile-menu-icon');
+const closeMobileMenu = document.getElementById('close-mobile-menu');
+const mobileMenu = document.getElementById('mobile-menu');
 const privacyPolicyLink = document.getElementById('privacy-policy-link');
 const cookieOverlay = document.getElementById('cookie-banner');
 const allowCookies = document.getElementById('allow-cookies');
@@ -30,6 +33,22 @@ closePrivacyPolicy.addEventListener("click", () => {
         privacyPolicy.classList.add('hidden');
         privacyPolicy.classList.remove('fade-closed');
     }, 1000);
+})
+
+openMobileMenu.addEventListener("click", ()=>{
+    mobileMenu.classList.add('fade-open');
+    mobileMenu.classList.remove('hidden');
+    setTimeout(()=>{
+        mobileMenu.classList.remove('fade-open');
+    }, 1000);
+})
+
+closeMobileMenu.addEventListener("click", ()=>{
+    mobileMenu.classList.add('fade-closed');
+    setTimeout(()=>{
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('fade-closed');
+    }, 1000)
 })
 
 const closeCookieOverlay = () => {
